@@ -730,30 +730,176 @@
                 gap: 2rem;
             }
         }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+            transition: border-color 0.3s ease;
+        }
+
+        .nav-profile:hover {
+            border-color: var(--secondary);
+        }
+
+        .nav-profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links li a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background: var(--dark);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: right 0.3s ease;
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li a {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo">GP</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-profile">
+                <img src="profile pic.jpeg" alt="Profile">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="profile-container">
-                <div class="profile-ring"></div>
-                <img src="https://via.placeholder.com/180x180/6366f1/ffffff?text=GP" alt="GokulPrasanth S" class="profile-img">
+                <div class="profile-ring">
+                    </div>
+                <img src="profile pic.jpeg" alt="GokulPrasanth S" class="profile-img">
             </div>
             <h1>GokulPrasanth S</h1>
             <p class="tagline">Ethical Hacking | Computer Science Student</p>
@@ -1068,7 +1214,7 @@
 
     <script>
         // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
+        const navbar = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -1076,6 +1222,14 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Toggle Menu Function
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
 
         // Scroll reveal animation
         const revealElements = document.querySelectorAll('.reveal');
