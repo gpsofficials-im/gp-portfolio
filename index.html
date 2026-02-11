@@ -324,8 +324,20 @@
             flex-wrap: wrap;
         }
 
-        .stat-item {
+        .stat-btn {
+            background: var(--card);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
             text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .stat-btn:hover {
+            background: var(--card-hover);
+            border-color: var(--primary);
+            transform: translateY(-4px);
         }
 
         .stat-number {
@@ -883,7 +895,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -904,9 +916,7 @@
             <h1>GokulPrasanth S</h1>
             <p class="tagline">Ethical Hacking | Computer Science Student</p>
             <p class="location">
-                <i class="fas fa-map-marker-alt"></i> Thirupathur, Tamil Nadu, India | 
-                <i class="fas fa-envelope"></i> prasanthgokul736@gmail.com | 
-                <i class="fas fa-phone"></i> +91 7094610210
+                
             </p>
             <div class="hero-buttons">
                 <a href="contact.html" class="btn btn-primary">
@@ -917,7 +927,7 @@
                 </a>
             </div>
             <div class="social-links">
-                <a href="https://github.com/Gokul-Prasanth-S" target="_blank" title="GitHub">
+                <a href="https://github.com/gpsofficials-im" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/gokul-prasanth-s-b29b012a6" target="_blank" title="LinkedIn">
@@ -929,7 +939,7 @@
                 <a href="tel:+917094610210" title="Phone">
                     <i class="fas fa-phone"></i>
                 </a>
-                <a href="https://www.instagram.com/gokul_prasanth_s/" target="_blank" title="Instagram">
+                <a href="https://www.instagram.com/_._ambivert_killer_gp_._?igsh=MWppcDhyMmNkZTRjaQ==" target="_blank" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -947,18 +957,18 @@
                 I am a highly motivated and responsible Computer Science student with a strong interest in full stack development and ethical hacking. I have good communication skills, a solid foundation in programming, and hands-on experience in building web applications. I enjoy learning new technologies, solving real-world problems, and contributing positively to team and organizational growth.
             </p>
             <div class="stats">
-                <div class="stat-item reveal">
-                    <div class="stat-number">5+</div>
+                <button onclick="scrollToSection('#projects')" class="stat-btn reveal">
+                    <div class="stat-number">1+</div>
                     <div class="stat-label">Projects</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number">6+</div>
+                </button>
+                <button onclick="scrollToSection('#certifications')" class="stat-btn reveal">
+                    <div class="stat-number">20+</div>
                     <div class="stat-label">Certifications</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number">2+</div>
+                </button>
+                <button onclick="scrollToSection('#experience')" class="stat-btn reveal">
+                    <div class="stat-number">----</div>
                     <div class="stat-label">Years Experience</div>
-                </div>
+                </button>
             </div>
         </div>
     </section>
@@ -1229,6 +1239,14 @@
             const navLinks = document.getElementById('navLinks');
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+        }
+
+        // Scroll to Section Function
+        function scrollToSection(sectionId) {
+            const element = document.querySelector(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         // Scroll reveal animation
