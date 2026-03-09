@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
-=======
->>>>>>> d555a2a (first commit)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +40,6 @@
             overflow-x: hidden;
         }
 
-        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -57,7 +53,6 @@
             border-radius: 4px;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -121,7 +116,6 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -129,11 +123,7 @@
             justify-content: center;
             padding: 6rem 5% 2rem;
             position: relative;
-<<<<<<< HEAD
             background:
-=======
-            background: 
->>>>>>> d555a2a (first commit)
                 radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
                 radial-gradient(ellipse at bottom right, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
         }
@@ -175,7 +165,6 @@
         }
 
         @keyframes pulse {
-<<<<<<< HEAD
 
             0%,
             100% {
@@ -187,10 +176,6 @@
                 transform: scale(1.05);
                 opacity: 0.5;
             }
-=======
-            0%, 100% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.05); opacity: 0.5; }
->>>>>>> d555a2a (first commit)
         }
 
         .hero h1 {
@@ -285,7 +270,6 @@
             border-color: transparent;
         }
 
-        /* Section Styles */
         section {
             padding: 5rem 5%;
         }
@@ -320,7 +304,6 @@
             margin-top: 1.5rem;
         }
 
-        /* About Section */
         .about {
             background: var(--dark);
         }
@@ -337,7 +320,6 @@
             line-height: 1.8;
         }
 
-        /* Stats */
         .stats {
             display: flex;
             justify-content: center;
@@ -346,25 +328,20 @@
             flex-wrap: wrap;
         }
 
-<<<<<<< HEAD
-        .stat-btn {
+        .stat-item {
+            text-align: center;
             background: var(--card);
             border: 1px solid rgba(99, 102, 241, 0.2);
             border-radius: 12px;
             padding: 1.5rem 2rem;
-            text-align: center;
-            cursor: pointer;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .stat-btn:hover {
+        .stat-item:hover {
             background: var(--card-hover);
             border-color: var(--primary);
             transform: translateY(-4px);
-=======
-        .stat-item {
-            text-align: center;
->>>>>>> d555a2a (first commit)
         }
 
         .stat-number {
@@ -381,7 +358,6 @@
             font-size: 0.9rem;
         }
 
-        /* Education Grid */
         .education-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -439,7 +415,6 @@
             margin-top: 0.5rem;
         }
 
-        /* Skills */
         .skills {
             background: var(--dark);
         }
@@ -489,7 +464,6 @@
             transform: scale(1.05);
         }
 
-        /* Experience */
         .experience-card {
             max-width: 800px;
             margin: 0 auto;
@@ -557,7 +531,6 @@
             font-weight: bold;
         }
 
-        /* Projects */
         .projects {
             background: var(--dark);
         }
@@ -603,16 +576,11 @@
             left: -50%;
             width: 200%;
             height: 200%;
-<<<<<<< HEAD
             background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-=======
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
->>>>>>> d555a2a (first commit)
             animation: shine 3s infinite;
         }
 
         @keyframes shine {
-<<<<<<< HEAD
             0% {
                 transform: translateX(-100%) rotate(45deg);
             }
@@ -620,10 +588,6 @@
             100% {
                 transform: translateX(100%) rotate(45deg);
             }
-=======
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
->>>>>>> d555a2a (first commit)
         }
 
         .project-content {
@@ -660,7 +624,6 @@
             color: var(--accent);
         }
 
-        /* Certifications */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -709,7 +672,6 @@
             font-size: 0.85rem;
         }
 
-        /* Footer */
         footer {
             background: var(--darker);
             padding: 3rem 5%;
@@ -729,7 +691,6 @@
         }
 
         @keyframes heartbeat {
-<<<<<<< HEAD
 
             0%,
             100% {
@@ -739,22 +700,14 @@
             50% {
                 transform: scale(1.2);
             }
-=======
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
->>>>>>> d555a2a (first commit)
         }
 
-        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> d555a2a (first commit)
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -772,7 +725,6 @@
             transform: translateY(0);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -800,7 +752,6 @@
             }
         }
 
-        /* Navbar Styles */
         .navbar {
             position: fixed;
             top: 0;
@@ -822,7 +773,6 @@
             align-items: center;
         }
 
-<<<<<<< HEAD
         .nav-profile {
             display: flex;
             align-items: center;
@@ -843,17 +793,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-=======
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            text-decoration: none;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
->>>>>>> d555a2a (first commit)
         }
 
         .nav-links {
@@ -889,7 +828,6 @@
             width: 100%;
         }
 
-        /* Hamburger Menu */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -919,7 +857,6 @@
             transform: rotate(-45deg) translate(5px, -6px);
         }
 
-        /* Mobile Responsive */
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
@@ -951,7 +888,6 @@
         }
     </style>
 </head>
-<<<<<<< HEAD
 
 <body>
     <nav class="navbar">
@@ -959,12 +895,6 @@
             <a href="#" class="nav-profile">
                 <img src="profile pic.jpeg" alt="Profile">
             </a>
-=======
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="nav-logo">GP</a>
->>>>>>> d555a2a (first commit)
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
@@ -972,11 +902,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
-<<<<<<< HEAD
                 <li><a href="contact.html">Contact</a></li>
-=======
-                <li><a href="#contact">Contact</a></li>
->>>>>>> d555a2a (first commit)
             </ul>
             <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -986,29 +912,18 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="profile-container">
-<<<<<<< HEAD
-                <div class="profile-ring">
-                </div>
-                <img src="profile pic.jpeg" alt="GokulPrasanth S" class="profile-img">
-=======
                 <div class="profile-ring"></div>
-                <img src="https://via.placeholder.com/180x180/6366f1/ffffff?text=GP" alt="GokulPrasanth S" class="profile-img">
->>>>>>> d555a2a (first commit)
+                <img src="profile pic.jpeg" alt="GokulPrasanth S" class="profile-img">
             </div>
             <h1>GokulPrasanth S</h1>
             <p class="tagline">Ethical Hacking | Computer Science Student</p>
             <p class="location">
-<<<<<<< HEAD
-
-=======
-                <i class="fas fa-map-marker-alt"></i> Thirupathur, Tamil Nadu, India | 
-                <i class="fas fa-envelope"></i> prasanthgokul736@gmail.com | 
+                <i class="fas fa-map-marker-alt"></i> Thirupathur, Tamil Nadu, India |
+                <i class="fas fa-envelope"></i> prasanthgokul736@gmail.com |
                 <i class="fas fa-phone"></i> +91 7094610210
->>>>>>> d555a2a (first commit)
             </p>
             <div class="hero-buttons">
                 <a href="contact.html" class="btn btn-primary">
@@ -1019,11 +934,7 @@
                 </a>
             </div>
             <div class="social-links">
-<<<<<<< HEAD
                 <a href="https://github.com/gpsofficials-im" target="_blank" title="GitHub">
-=======
-                <a href="https://github.com/Gokul-Prasanth-S" target="_blank" title="GitHub">
->>>>>>> d555a2a (first commit)
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/gokul-prasanth-s-b29b012a6" target="_blank" title="LinkedIn">
@@ -1035,19 +946,14 @@
                 <a href="tel:+917094610210" title="Phone">
                     <i class="fas fa-phone"></i>
                 </a>
-<<<<<<< HEAD
                 <a href="https://www.instagram.com/_._ambivert_killer_gp_._?igsh=MWppcDhyMmNkZTRjaQ==" target="_blank"
                     title="Instagram">
-=======
-                <a href="https://www.instagram.com/gokul_prasanth_s/" target="_blank" title="Instagram">
->>>>>>> d555a2a (first commit)
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="section-header">
             <h2 class="section-title">About Me</h2>
@@ -1055,47 +961,28 @@
         </div>
         <div class="about-content">
             <p class="about-text reveal">
-<<<<<<< HEAD
                 I am a highly motivated and responsible Computer Science student with a strong interest in full stack
                 development and ethical hacking. I have good communication skills, a solid foundation in programming,
                 and hands-on experience in building web applications. I enjoy learning new technologies, solving
                 real-world problems, and contributing positively to team and organizational growth.
             </p>
             <div class="stats">
-                <button onclick="scrollToSection('#projects')" class="stat-btn reveal">
-                    <div class="stat-number">1+</div>
-                    <div class="stat-label">Projects</div>
-                </button>
-                <button onclick="scrollToSection('#certifications')" class="stat-btn reveal">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Certifications</div>
-                </button>
-                <button onclick="scrollToSection('#experience')" class="stat-btn reveal">
-                    <div class="stat-number">----</div>
-                    <div class="stat-label">Years Experience</div>
-                </button>
-=======
-                I am a highly motivated and responsible Computer Science student with a strong interest in full stack development and ethical hacking. I have good communication skills, a solid foundation in programming, and hands-on experience in building web applications. I enjoy learning new technologies, solving real-world problems, and contributing positively to team and organizational growth.
-            </p>
-            <div class="stats">
-                <div class="stat-item reveal">
+                <div class="stat-item" onclick="scrollToSection('#projects')">
                     <div class="stat-number">5+</div>
                     <div class="stat-label">Projects</div>
                 </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number">6+</div>
+                <div class="stat-item" onclick="scrollToSection('#certifications')">
+                    <div class="stat-number">20+</div>
                     <div class="stat-label">Certifications</div>
                 </div>
-                <div class="stat-item reveal">
+                <div class="stat-item" onclick="scrollToSection('#experience')">
                     <div class="stat-number">2+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
->>>>>>> d555a2a (first commit)
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education">
         <div class="section-header">
             <h2 class="section-title">Education</h2>
@@ -1141,7 +1028,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="section-header">
             <h2 class="section-title">Technical Skills</h2>
@@ -1191,7 +1077,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
         <div class="section-header">
             <h2 class="section-title">Experience</h2>
@@ -1215,251 +1100,6 @@
         </div>
     </section>
 
-<<<<<<< HEAD
-    < <!-- Projects Section 1-->
-        <section class="projects" id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Jarvis E-Commerce Website</h3>
-                        <p>A fully functional e-commerce website with user-friendly interface and shopping features.
-                            Developed with modern web technologies for seamless user experience.</p>
-                        <div class="project-links">
-                            <a href="https://abhi0626-kr.github.io/Jarvis./"><i class="fas fa-external-link-alt"></i>
-                                Visit
-                                Website</a>
-                            <a href="https://github.com/GOKUL7094/jarves.git"><i class="fab fa-github"></i> View
-                                Code</a>
-                            <a href="../int%20img/jarves%20doc%20img/GOKUL%20PROJECT%20REPORT-images-0.jpg"
-                                target="_blank" class="view-report-btn"><i class="fas fa-file-image"></i> View Project
-                                Report</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Password Strength Checker</h3>
-                        <p>A tool that analyzes password strength based on various criteria including length,
-                            complexity,
-                            and character variety to help users create secure passwords.</p>
-                        <div class="project-links">
-                            <a href="https://gpsofficials-im.github.io/password_strength_checker/"><i
-                                    class="fas fa-external-link-alt"></i> Visit
-                                Website</a>
-                            <a href="https://github.com/gpsofficials-im/password_strength_checker"><i
-                                    class="fab fa-github"></i> View
-                                Code</a>
-                            <a href="../int%20img/jarves%20doc%20img/GOKUL%20PROJECT%20REPORT-images-0.jpg"
-                                target="_blank" class="view-report-btn"><i class="fas fa-file-image"></i> View Project
-                                Report</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-        </section>
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <div class="section-header">
-                <h2 class="section-title">Certifications</h2>
-                <p class="section-subtitle">Professional credentials</p>
-            </div>
-            <div class="cert-grid">
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Internship Certificate - Full Stack Development</h4>
-                        <p>Edu Tantr | May 2025</p>
-                    </div>
-                </div>
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Oracle Certified Foundation Associate</h4>
-                        <p>Oracle University | Aug 2025</p>
-                    </div>
-                </div>
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Basics of Python</h4>
-                        <p>Infosys | Mar 2025</p>
-                    </div>
-                </div>
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Object Oriented Programming using Python</h4>
-                        <p>Infosys | Mar 2025</p>
-                    </div>
-                </div>
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Explore Machine Learning using Python</h4>
-                        <p>Infosys | Mar 2025</p>
-                    </div>
-                </div>
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Introduction to MongoDB for Students</h4>
-                        <p>ICT Academy | Aug 2024</p>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="certificates.html" class="btn btn-primary">
-                    <i class="fas fa-award"></i> View All Certificates
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 gpsofficials-im. All rights reserved.</p>
-            <p>Built with <span class="heart">❤️</span> and lots of coffee</p>
-        </footer>
-
-        <script>
-            // Navbar scroll effect
-            const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-
-            // Toggle Menu Function
-            function toggleMenu() {
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('navLinks');
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            }
-
-            // Scroll to Section Function
-            function scrollToSection(sectionId) {
-                const element = document.querySelector(sectionId);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-
-            // Scroll reveal animation
-            const revealElements = document.querySelectorAll('.reveal');
-
-            const revealOnScroll = () => {
-                revealElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-
-                    if (elementTop < windowHeight - 100) {
-                        element.classList.add('active');
-                    }
-                });
-            };
-
-            window.addEventListener('scroll', revealOnScroll);
-            window.addEventListener('load', revealOnScroll);
-
-            // Smooth scroll for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Active navigation highlight
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-links a');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (scrollY >= sectionTop - 200) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.style.color = '';
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.style.color = 'var(--primary)';
-                    }
-                });
-            });
-
-            // Animate stats numbers
-            const animateStats = () => {
-                const stats = document.querySelectorAll('.stat-number');
-                stats.forEach(stat => {
-                    const target = parseInt(stat.textContent);
-                    let current = 0;
-                    const increment = target / 50;
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= target) {
-                            stat.textContent = target + '+';
-                            clearInterval(timer);
-                        } else {
-                            stat.textContent = Math.floor(current);
-                        }
-                    }, 30);
-                });
-            };
-
-            // Trigger stats animation when about section is visible
-            const aboutSection = document.querySelector('.about');
-            let statsAnimated = false;
-
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !statsAnimated) {
-                        animateStats();
-                        statsAnimated = true;
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            statsObserver.observe(aboutSection);
-        </script>
-</body>
-
-</html>
-=======
-    <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="section-header">
             <h2 class="section-title">Projects</h2>
@@ -1472,7 +1112,8 @@
                 </div>
                 <div class="project-content">
                     <h3>Jarvis E-Commerce Website</h3>
-                    <p>A fully functional e-commerce website with user-friendly interface and shopping features. Developed with modern web technologies for seamless user experience.</p>
+                    <p>A fully functional e-commerce website with user-friendly interface and shopping features.
+                        Developed with modern web technologies for seamless user experience.</p>
                     <div class="project-links">
                         <a href="https://abhi0626-kr.github.io/Jarvis./" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Live Demo
@@ -1480,8 +1121,26 @@
                         <a href="https://github.com/GOKUL7094/jarves.git" target="_blank">
                             <i class="fab fa-github"></i> View Code
                         </a>
-                        <a href="int%20img/jarves%20doc%20img/GOKUL%20PROJECT%20REPORT-images-0.jpg" target="_blank">
+                        <a href="int img/jarves doc img/GOKUL PROJECT REPORT-images-0.jpg" target="_blank">
                             <i class="fas fa-file-image"></i> Report
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Password Strength Checker</h3>
+                    <p>A tool that analyzes password strength based on various criteria including length, complexity,
+                        and character variety to help users create secure passwords.</p>
+                    <div class="project-links">
+                        <a href="https://gpsofficials-im.github.io/password_strength_checker/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Visit Website
+                        </a>
+                        <a href="https://github.com/gpsofficials-im/password_strength_checker" target="_blank">
+                            <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
                 </div>
@@ -1492,28 +1151,16 @@
                 </div>
                 <div class="project-content">
                     <h3>Security Assessment Tools</h3>
-                    <p>Collection of Python scripts and tools for ethical hacking and penetration testing. Includes network scanners and vulnerability assessment utilities.</p>
+                    <p>Collection of Python scripts and tools for ethical hacking and penetration testing. Includes
+                        network scanners and vulnerability assessment utilities.</p>
                     <div class="project-links">
                         <a href="#"><i class="fas fa-lock"></i> Private Repository</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card reveal">
-                <div class="project-image">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Data Visualization Dashboard</h3>
-                    <p>Interactive dashboard for visualizing complex datasets using JavaScript charting libraries. Features real-time data updates and customizable views.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-code-branch"></i> In Development</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications">
         <div class="section-header">
             <h2 class="section-title">Certifications</h2>
@@ -1582,15 +1229,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Gokul Prasanth S. All rights reserved.</p>
+        <p>&copy; 2025 gpsofficials-im. All rights reserved.</p>
         <p>Built with <span class="heart">❤️</span> and lots of coffee</p>
     </footer>
 
     <script>
-        // Navbar scroll effect
         const navbar = document.querySelector('.navbar');
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -1599,7 +1245,6 @@
             }
         });
 
-        // Toggle Menu Function
         function toggleMenu() {
             const hamburger = document.getElementById('hamburger');
             const navLinks = document.getElementById('navLinks');
@@ -1607,14 +1252,20 @@
             navLinks.classList.toggle('active');
         }
 
-        // Scroll reveal animation
+        function scrollToSection(sectionId) {
+            const element = document.querySelector(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
         const revealElements = document.querySelectorAll('.reveal');
-        
+
         const revealOnScroll = () => {
             revealElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                
+
                 if (elementTop < windowHeight - 100) {
                     element.classList.add('active');
                 }
@@ -1624,7 +1275,6 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1638,9 +1288,8 @@
             });
         });
 
-        // Active navigation highlight
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-links a');
+        const navLinksItems = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', () => {
             let current = '';
@@ -1652,7 +1301,7 @@
                 }
             });
 
-            navLinks.forEach(link => {
+            navLinksItems.forEach(link => {
                 link.style.color = '';
                 if (link.getAttribute('href') === `#${current}`) {
                     link.style.color = 'var(--primary)';
@@ -1660,7 +1309,6 @@
             });
         });
 
-        // Animate stats numbers
         const animateStats = () => {
             const stats = document.querySelectorAll('.stat-number');
             stats.forEach(stat => {
@@ -1679,7 +1327,6 @@
             });
         };
 
-        // Trigger stats animation when about section is visible
         const aboutSection = document.querySelector('.about');
         let statsAnimated = false;
 
@@ -1695,5 +1342,5 @@
         statsObserver.observe(aboutSection);
     </script>
 </body>
+
 </html>
->>>>>>> d555a2a (first commit)
