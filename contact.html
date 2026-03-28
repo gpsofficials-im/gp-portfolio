@@ -2,556 +2,287 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Gokul Prasanth S</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #6366f1;
-            --secondary-color: #8b5cf6;
-            --accent-color: #ec4899;
-            --dark-bg: #0f172a;
-            --card-bg: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #fff;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            line-height: 1.6;
         }
 
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--dark-bg);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--gradient);
-            border-radius: 5px;
-        }
-
-        header {
-            background: var(--card-bg);
-            padding: 2rem 5%;
-            text-align: center;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-            position: relative;
-        }
-
-        .back-btn {
-            position: absolute;
-            left: 5%;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-secondary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .back-btn:hover {
-            color: var(--primary-color);
-            transform: translateY(-50%) translateX(-5px);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        main {
-            flex: 1;
-            padding: 3rem 5%;
-            max-width: 1200px;
+        .container {
+            width: 90%;
+            max-width: 1100px;
             margin: 0 auto;
-            width: 100%;
+            padding: 40px 0;
         }
 
-        .contact-container {
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: #0ea5e9;
+            transform: translateX(-4px);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 30px;
         }
 
-        .contact-info {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(99, 102, 241, 0.2);
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            padding: 28px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
         }
 
-        .contact-info h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .contact-info>p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.8;
+        .card h2 {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            color: #38bdf8;
         }
 
         .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: var(--dark-bg);
-            border-radius: 12px;
-            transition: all 0.3s ease;
+            margin-bottom: 18px;
         }
 
-        .info-item:hover {
-            transform: translateX(5px);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-        }
-
-        .info-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .info-content h3 {
+        .info-item h3 {
             font-size: 1rem;
-            margin-bottom: 0.3rem;
-            color: var(--text-primary);
+            margin-bottom: 6px;
+            color: #f8fafc;
         }
 
-        .info-content p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .info-content a {
-            color: var(--primary-color);
+        .info-item p,
+        .info-item a {
+            color: #cbd5e1;
             text-decoration: none;
-            transition: color 0.3s ease;
+            word-break: break-word;
         }
 
-        .info-content a:hover {
-            color: var(--accent-color);
-        }
-
-        .social-section {
-            margin-top: 2rem;
-        }
-
-        .social-section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
+        .info-item a:hover {
+            color: #38bdf8;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
             flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .social-links a,
+        .quick-actions a,
+        button {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s ease;
         }
 
         .social-links a {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            background: var(--dark-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            font-size: 1.2rem;
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
         }
 
         .social-links a:hover {
-            background: var(--gradient);
-            color: white;
-            transform: translateY(-5px);
-            border-color: transparent;
+            background: #38bdf8;
+            color: #0f172a;
         }
 
-        .contact-form {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-        }
-
-        .contact-form h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: var(--dark-bg);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 10px;
-            color: var(--text-primary);
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: var(--text-secondary);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 1rem 2rem;
-            background: var(--gradient);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        form {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        .btn-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.06);
+            color: white;
+            outline: none;
+            font-size: 0.95rem;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        button {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+            transform: translateY(-2px);
         }
 
         .quick-actions {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            text-align: center;
-        }
-
-        .quick-actions h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .action-buttons {
+            margin-top: 35px;
             display: flex;
-            gap: 1rem;
-            justify-content: center;
             flex-wrap: wrap;
+            gap: 12px;
         }
 
-        .action-btn {
-            padding: 1rem 2rem;
-            background: var(--dark-bg);
-            color: var(--text-primary);
-            text-decoration: none;
-            border-radius: 10px;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .action-btn:hover {
-            background: var(--gradient);
+        .quick-actions a {
+            background: rgba(255, 255, 255, 0.08);
             color: white;
-            transform: translateY(-3px);
-            border-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .quick-actions a:hover {
+            background: #38bdf8;
+            color: #0f172a;
         }
 
         footer {
-            background: var(--dark-bg);
-            padding: 2rem 5%;
             text-align: center;
-            border-top: 1px solid rgba(99, 102, 241, 0.2);
-        }
-
-        footer p {
-            color: var(--text-secondary);
-        }
-
-        footer .heart {
-            color: var(--accent-color);
-            animation: heartbeat 1.5s ease infinite;
-        }
-
-        @keyframes heartbeat {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
+            margin-top: 40px;
+            color: #94a3b8;
+            font-size: 0.95rem;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .back-btn {
-                position: static;
-                transform: none;
-                margin-bottom: 1rem;
-                justify-content: center;
-            }
-
-            .contact-container {
+            .contact-wrapper {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
 
-            .contact-info,
-            .contact-form {
-                padding: 1.5rem;
-            }
-
-            .action-buttons {
-                flex-direction: column;
-            }
-
-            .action-btn {
-                justify-content: center;
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .hero h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <a href="index.html" class="back-btn">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
-        <h1>Get In Touch</h1>
-        <p>I'd love to hear from you! Let's connect and create something amazing together.</p>
-    </header>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
 
-    <main>
-        <div class="contact-container">
-            <div class="contact-info fade-in">
+        <section class="hero">
+            <h1>Get In Touch</h1>
+            <p>
+                I'd love to hear from you! Let's connect and create something amazing together.
+            </p>
+        </section>
+
+        <div class="contact-wrapper">
+            <div class="card">
                 <h2>Contact Information</h2>
-                <p>Feel free to reach out to me through any of the following channels. I'm always open to discussing new
-                    projects, creative ideas, or opportunities to be part of your vision.</p>
 
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Email</h3>
-                        <p><a href="mailto:prasanthgokul736@gmail.com">prasanthgokul736@gmail.com</a></p>
-                    </div>
+                    <p>
+                        Feel free to reach out to me through any of the following channels.
+                        I'm always open to discussing new projects, creative ideas, or opportunities
+                        to be part of your vision.
+                    </p>
                 </div>
 
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Phone</h3>
-                        <p><a href="tel:+917094610210">+91 7094610210</a></p>
-                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:prasanthgokul736@gmail.com">prasanthgokul736@gmail.com</a>
                 </div>
 
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="info-content">
-                        <h3>Location</h3>
-                        <p>Thirupathur, Tamil Nadu, India</p>
-                    </div>
+                    <h3>Phone</h3>
+                    <a href="tel:+917094610210">+91 7094610210</a>
                 </div>
 
-                <div class="social-section">
+                <div class="info-item">
+                    <h3>Location</h3>
+                    <p>Thirupathur, Tamil Nadu, India</p>
+                </div>
+
+                <div class="info-item">
                     <h3>Follow Me</h3>
                     <div class="social-links">
-                        <a href="https://github.com/gpsofficials-im" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/gokul-prasanth-s-b29b012a6" target="_blank"
-                            title="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/_._ambivert_killer_gp_._?igsh=MWppcDhyMmNkZTRjaQ=="
-                            target="_blank" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="mailto:prasanthgokul736@gmail.com" title="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                        <a href="https://github.com/gpsofficials-im" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
                     </div>
                 </div>
             </div>
 
-            <div class="contact-form fade-in">
+            <div class="card">
                 <h2>Send Message</h2>
-                <form id="contactForm" action="mailto:prasanthgokul736@gmail.com?subject=Contact Form Submission"
-                    method="POST" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Your Name <span style="color: var(--accent-color)">*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required minlength="2"
-                            maxlength="50">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="email">Your Email <span style="color: var(--accent-color)">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject <span style="color: var(--accent-color)">*</span></label>
-                        <input type="text" id="subject" name="subject" placeholder="Enter subject" required
-                            minlength="3">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message <span style="color: var(--accent-color)">*</span></label>
-                        <textarea id="message" name="message" placeholder="Write your message here..." required
-                            minlength="10"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <input type="text" name="name" placeholder="Your Name *" required />
+                    <input type="email" name="email" placeholder="Your Email *" required />
+                    <input type="tel" name="phone" placeholder="Phone Number" />
+                    <input type="text" name="subject" placeholder="Subject *" required />
+                    <textarea name="message" placeholder="Message *" required></textarea>
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
 
-        <div class="quick-actions fade-in">
-            <h2>Quick Actions</h2>
-            <div class="action-buttons">
-                <a href="mailto:prasanthgokul736@gmail.com" class="action-btn">
-                    <i class="fas fa-envelope"></i> Send Email
-                </a>
-                <a href="tel:+917094610210" class="action-btn">
-                    <i class="fas fa-phone"></i> Call Now
-                </a>
-                <a href="https://www.linkedin.com/in/gokul-prasanth-s-b29b012a6" target="_blank" class="action-btn">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="index.html" class="action-btn">
-                    <i class="fas fa-user"></i> View Portfolio
-                </a>
-            </div>
+        <div class="quick-actions">
+            <a href="mailto:prasanthgokul736@gmail.com">Send Email</a>
+            <a href="tel:+917094610210">Call Now</a>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="index.html">View Portfolio</a>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Gokul Prasanth S. All rights reserved.</p>
-        <p>Built with <span class="heart">❤️</span> by Gokul Prasanth S</p>
-    </footer>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            alert('Thank you, ' + name + '! Your email client will open to send the message.\n\nThis will send your message to: prasanthgokul736@gmail.com\n\nForm Details:\n- Name: ' + name + '\n- Email: ' + email + '\n- Phone: ' + (phone || 'Not provided') + '\n- Subject: ' + subject);
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.2}s`;
-            });
-        });
-    </script>
+        <footer>
+            <p>© 2025 gpsofficials-im. All rights reserved.</p>
+            <p>Built with ❤️ by gpsofficials-im</p>
+        </footer>
+    </div>
 </body>
 
 </html>
